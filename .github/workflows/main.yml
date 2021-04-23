@@ -33,7 +33,7 @@ jobs:
       - name: Request Team Reviewers
         run: |
           curl -X POST \
-          -H "Authorization: token ${{ secrets.PAT }}" \
+          -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
           -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/wechorg/adding_team_reviewers/pulls/1/requested_reviewers \
           -d '{"team_reviewers":["level2"]}'
