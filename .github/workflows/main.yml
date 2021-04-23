@@ -30,7 +30,7 @@ jobs:
         uses: hmarr/debug-action@v2
 
       # Runs a set of commands using the runners shell
-      - name: Create Netral check
+      - name: Request Team Reviewers
         run: |
           curl -X POST \
           -H "Authorization: token ${{ secrets.PAT }}" \
